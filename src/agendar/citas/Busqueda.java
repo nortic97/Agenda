@@ -77,7 +77,7 @@ public class Busqueda extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -165,8 +165,7 @@ public class Busqueda extends javax.swing.JFrame {
 
         entrada1.setDateFormatString("dd-MM-yyyy");
         entrada1.setEnabled(false);
-        entrada1.setFocusable(false);
-        entrada1.setOpaque(false);
+        entrada1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
 
         salida1.setDateFormatString("dd-MM-yyyy");
         salida1.setEnabled(false);

@@ -121,6 +121,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel7.setText("Marca");
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconfinder_contacts_216165.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -272,24 +277,23 @@ public class GUI extends javax.swing.JFrame {
         txtmodelo.setText(null);
         entrada.setDate(null);
         salida.setDate(null);
-       
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         Date date1 = entrada.getDate();
-        
+
         long d1 = date1.getTime();
-        
+
         java.sql.Date Entrada = new java.sql.Date(d1);
-        
+
         Date date2 = salida.getDate();
-        
+
         long d2 = date2.getTime();
-        
+
         java.sql.Date Salida = new java.sql.Date(d2);
-        
-        
+
         Connection con = null;
 
         try {
@@ -328,16 +332,20 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        
+
         Busqueda busqueda = new Busqueda();
-        
+
         busqueda.setVisible(true);
-        
-        
-        
-        
-       
+
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        Agenda agenda = new Agenda();
+
+        agenda.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
